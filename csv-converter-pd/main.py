@@ -1,7 +1,7 @@
 import csv
 import pandas as pd
 
-df = pd.read_csv('~/Downloads/bao.csv')
+df = pd.read_csv('home/tuyen/Downloads/bao.csv')
 
 df[['ward_id', 'district_id', 'region_id']] = df[['ward_id', 'district_id', 'region_id']].astype(int)
 
