@@ -1,4 +1,4 @@
-from itertools import chain
+
 import numpy as np
 import csv
 
@@ -21,14 +21,12 @@ print(type(data[1,0]))
 
 with open('np-converter.csv', 'w') as fh:
     writer = csv.writer(fh, delimiter=',', quoting=csv.QUOTE_NONNUMERIC)
-    writer.writerow(chain.from_iterable(data))
+    writer.writerows(data)
 
 print(type(data))
 
-
+# https://stackoverflow.com/questions/20624428/how-to-save-numpy-array-of-strings-with-commas-to-csv
 # https://pythonguides.com/python-write-array-to-csv/
 # https://stackoverflow.com/questions/53168799/writing-a-list-of-numpy-arrays-to-csv
-
 # https://stackoverflow.com/questions/4753704/python-csv-remove-quotes-from-value
-
 # https://stackoverflow.com/questions/31598515/write-numpy-array-to-csv-with-row-indices-and-header/47606787
