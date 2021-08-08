@@ -19,16 +19,14 @@ with open('bao.csv', mode='r') as csv_file_in, open('ward_converted.csv', mode='
     for row in csv_reader:
         if line_count == 0:
             csv_writer.writerow(row)
-            next(csv_reader)
+            #next(csv_reader) : use when you want to skip to next line
 
         my_list = list(row.values())
-        print(my_list[0])
 
         for k in range(n):
             if k == 0 or k == 3 or k == 6:
                 my_list[k] = int(my_list[k])
 
-        print(list)
         csv_writer.writerow(my_list)
         line_count += 1
 
